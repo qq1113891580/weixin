@@ -1,0 +1,537 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+body,html{
+	font-family: "宋体 幼圆";
+	background: #AE0F35;
+	max-width: 600px;  /*这个重点*/
+	margin: 0 auto;
+	font-size: 16px;
+}
+img{
+	display: block;
+}
+#warp,#warp > img{
+	width:100%;
+	margin-top: -1px;
+}
+#cj{
+	display: none;
+}
+#cj,#cj > img{
+	width:100%;
+	margin-top: -1px;
+	position: relative; /*相对于max-width: 600px;(body,html)定位*/
+}
+#cj #jp{
+	position: absolute;
+	bottom: 3%;
+	left: 9%; 
+	width: 81.5%;
+	height: 23%;
+	background: white;
+	border: solid 3px #EE2A1A;
+	border-radius: 2px;
+	overflow: hidden;
+}
+#cj #zpang{
+	position: absolute;
+	top: 20%;
+	left: 9%; 
+	width: 81.5%;
+	height: 41%;
+	border: solid 3px transparent;
+	border-radius: 2px;
+}
+#zpang > p{
+	color: #FADB1F;
+	text-align: center;
+	font-size:.8rem;
+}
+#zpang #box{
+	position: absolute;
+	width: 100%;
+	height: 92%;
+	top: 7%;
+	left: -0.6%;
+	border: solid 3px #EE2A1A;
+	border-radius: 2px;
+	background: white;
+}
+#box img{
+	width:33.3%;
+	height:33.3%;
+	border: solid 3px white;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#box img:nth-of-type(1){
+	border: solid 3px aqua;
+}
+#box img:nth-of-type(2){
+	left: 33.3%;
+}
+#box img:nth-of-type(3){
+	left:66.6%;
+}
+#box img:nth-of-type(4){
+	left:66.6%;
+	top: 33.3%;
+}
+#box img:nth-of-type(5){
+	left:66.6%;
+	top: 66.6%;
+}
+#box img:nth-of-type(6){
+	left: 33.3%;
+	top: 66.6%;
+}
+#box img:nth-of-type(7){
+	left:0%;
+	top: 66.6%;
+}
+#box img:nth-of-type(8){
+	left:0%;
+	top: 33.3%;
+}
+#box img:nth-of-type(9){
+	left: 33.3%;
+	top: 33.3%;
+}
+
+#zpang p > span:first-of-type{
+	padding-right:.3rem;
+}
+#zpang p > span:last-of-type{
+	padding-left:1.88rem;
+	cursor: pointer;
+}
+#jp > p{
+	font-size:1.5rem;
+	color: #FF0000;
+	font-weight: 900;
+	text-indent: .5rem;
+}
+#jp ul li{
+	display: block;
+	color: #666;
+	line-height: 1.5rem;
+	text-indent: .6rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-top: 3px;
+	font-size:.8rem;
+}
+#jp .zj_user{
+	margin-top: 5px;
+	overflow: hidden;
+}
+#jp .zj_user ul{
+	-webkit-animation: lyt_zjiang 20s linear infinite;
+	-moz-animation: lyt_zjiang 20s linear infinite;
+	-ms-animation: lyt_zjiang 20s linear infinite;
+	-o-animation: lyt_zjiang 20s linear infinite;
+	animation: lyt_zjiang 20s linear infinite;
+}
+
+/*游戏规则说明:start*/
+#cj #shuoming,#cj #user_login,#cj #zjts,#cj #cjcs,#cj #nyzj,#cj .dj_pass{
+	position: fixed;  /*相对于#cj进行定位*/
+	width: 85%;  /*百分比相对于父元素(#cj)的百分比进行计算*/
+	height: 70%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-radius: 3px;
+	background: white;
+	max-width: 498px;
+	z-index: 10;
+	line-height: 190%;
+	color: #3c3c3c;
+	overflow-y: scroll;
+	display: none;
+}
+#cj #user_login,#cj #zjts,#cj #cjcs,#cj #nyzj{
+	height: 40%;
+	overflow-y: hidden;
+}
+#cj #nyzj{
+	height: 300px;
+}
+/*立即兑奖密码:start*/
+#cj .dj_pass{
+	height: 200px;
+	border:1px solid #CCCCCC;
+}
+/*立即兑奖密码:end*/
+
+/*我的奖品:start*/
+#cj #jping{
+	position: absolute;
+	top: 23%;
+	left: 6%; 
+	width: 88%;
+	height: auto;
+	border: solid 1px transparent;
+	overflow: hidden;
+	display: none;
+}
+#jping > img:first-of-type,#jping > img:nth-of-type(3),#jping > img:nth-of-type(4){
+	width: 120%;
+	margin-left: -10%;
+}
+#jping > img:nth-of-type(2){
+	width: 100%;
+}
+#jping #jping_mainBox{
+	position:inherit
+	width: 100%;
+	height: auto;
+	background: white;
+	border: solid 3px #EE2A1A;
+	z-index:12;
+	border-radius: 2px;
+}
+#jping_mainBox .js_logo > img{
+	width: 15%;
+	margin:10px auto;
+	border:1px solid #EEEEEE;
+	padding: 2% 39%;
+	border-radius: 2px;
+}
+#jping_mainBox .jp_content{
+	width: 93%;
+	height: auto;
+	margin: auto;
+	border:1px solid transparent;
+	line-height: 160%;
+	color: #3C3C3C;
+	font-size: .8rem;
+}
+#jping_mainBox .duijiang{
+	text-align: center;
+	background:#ED2D1E;
+	color: #F7D679;
+	margin-top: 7px;
+	padding: 6px 0;
+	border-radius: 2px;
+	cursor: pointer;
+}
+#jping_mainBox .main_box{
+	margin-bottom: 17px;
+}
+/*我的奖品:end*/
+
+::-webkit-scrollbar{/* 这是针对缺省样式 (必须的) */
+	width: 7px;
+}
+::-webkit-scrollbar-thumb{
+	background-color: #D6D7D9;
+	border-radius: 10px;
+}
+#user::-webkit-input-placeholder,#pass::-webkit-input-placeholder{
+	font-size: .8rem;
+	color: #999999;
+}
+#shuoming h3,#user_login h3,#zjts h3,#cjcs h3,#nyzj h3,.dj_pass h3{
+	text-align: center;
+	margin-top: 5px;
+	font-weight: normal;
+}
+#user_login h3,#zjts h3,#cjcs h3,#nyzj h3,.dj_pass h3{
+	margin-top: 5%;
+}
+#nyzj h3{
+	color: red;
+}
+#shuoming p,#user_login p{
+	padding-left: .8rem;
+	font-size: .9rem;
+}
+#cj #yxsm_btn,#cj #user_btn,#cj #gxie_btn,#cj #cjcs_btn,#cj #nyzj_btn,#cj .dj_pass_btn{
+	position: fixed;
+	width: 85%;
+	height: 9%;
+	background: white;
+	z-index: -1;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	max-width: 498px;
+	font-size: 1.2rem;
+	color: #3C3C3C;
+	text-align: center;
+	cursor: pointer;
+	border-top: 1px solid #EEEEEE;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, 300%);
+	-moz-transform: translate(-50%, 300%);
+	-ms-transform: translate(-50%, 300%);
+	-o-transform: translate(-50%, 300%);
+	transform: translate(-50%, 300%);
+	display: table;
+}
+#yxsm_btn{
+	opacity: 0;
+}
+#cj #user_btn,#cj #gxie_btn,#cj #cjcs_btn,#cj #nyzj_btn{
+	border-top: 1px solid #EEEEEE;
+	z-index:11;
+	width: 100%;
+	height: 7vh;
+	-webkit-transform: translate(-50%, 13vh);
+}
+#cj .dj_pass_btn{
+	border-top:none;
+	-webkit-transform: translate(-50%, 50px);
+	width: 80%;
+}
+.dj_pass_btn > span{
+	display: inline-block;
+	width: 40%;
+	border:1px solid #EEEEEE;
+}
+.dj_pass > input{
+	display: block;
+	width: 80%;
+	height: 30px;
+	margin:7% auto;
+	border:1px solid #CCCCCC;
+	border-radius: 3px;
+	text-indent: 7px;
+}
+#cj #nyzj_btn{
+	-webkit-transform: translate(-50%, 100px);
+	line-height: 50px;
+}
+#user_login #userName,#user_login #password{
+	position: fixed;
+	width: 85%;
+	height: 17%;
+	border:1px solid transparent;
+	border-radius: 2px;
+	display: table;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -130%);
+	-moz-transform: translate(-50%, -130%);
+	-ms-transform: translate(-50%, -130%);
+	-o-transform: translate(-50%, -130%);
+	transform: translate(-50%, -130%);
+}
+#user_login #userName > span:last-of-type,#user_login #password > span:last-of-type{
+	opacity: 0;
+	cursor: default;
+}
+#userName > input,#password > input{
+	display:inline-block;
+	width: 93%;
+	height: 4vh;
+	border:1px solid #EEEEEE;
+	text-indent: .5rem;
+}
+#user_login #password{
+	-webkit-transform: translate(-50%, 30%);
+}
+#user_login #userName > span,#user_login #password > span{
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+#yxsm_btn > span,#user_btn > span,#cj #gxie_btn > span,#cj #cjcs_btn > span,
+#cj #nyzj_btn > span{
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+}
+#zjts p,#cjcs p{
+	text-align: center;
+	line-height: 24vh;
+}
+#nyzj p{
+	text-align: center;
+}
+#nyzj .zjdz{
+	width: 95%;
+	height: 190px;
+	border:1px solid transparent;
+	margin:.5rem auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-top: .6rem;
+}
+#user_btn > span:first-of-type{
+	border-right:1px solid #EEEEEE;
+}
+#mb{  /*蒙版*/
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background:rgba(0,0,0,.6);
+	display: none;
+}
+/*游戏规则说明:end*/
+
+
+.lytA{
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
+}
+.lytB{
+	-webkit-animation-play-state: running;
+	-moz-animation-play-state: running;
+	-ms-animation-play-state: running;
+	-o-animation-play-state: running;
+	animation-play-state: running;
+}
+/*无缝轮播*/
+@-webkit-keyframes lyt_zjiang{
+	0%{
+		
+	}
+	100%{
+		-webkit-transform:translateY(-59.5%);
+		-moz-transform:translateY(-59.5%);
+		-ms-transform:translateY(-59.5%);
+		-o-transform:translateY(-59.5%);
+		transform:translateY(-59.5%);
+	}
+}
+@media only screen and (max-height:811px) {
+	#jp p{
+		font-size:1.2rem;
+	}
+}
+@media only screen and (max-height:360px) {
+	#cj #user_login,#cj #zjts,#cj #cjcs{
+		height: 200px;
+	}
+	#cj #user_btn,#cj #gxie_btn,#cj #cjcs_btn{
+		height: 7vh;
+		margin-top: 25px;
+	}
+	#userName > input,#password > input{
+		height: 6vh;
+	}
+	#zjts p,#cjcs p{
+		line-height: 32vh;
+	}
+	#user::-webkit-input-placeholder,#pass::-webkit-input-placeholder{
+		font-size: .9rem;
+	}
+	#jping_mainBox .jp_content{
+		font-size: .8rem;
+		line-height: 150%;
+	}
+}
+@media only screen and (max-height:811px) and (max-width:360px){
+	#jp p{
+		font-size:.8rem;
+	}
+	#jp ul li,#zpang > p{
+		font-size:.6rem;
+	}
+	#jp ul li{
+		line-height: 160%;
+	}
+	#shuoming h3{
+		font-size:.8rem;
+	}
+	#shuoming p{
+		font-size:.6rem;
+	}
+	#cj #shuoming{
+		line-height: 120%;
+	}
+	#cj #yxsm_btn{
+		font-size:.8rem;
+		height: 6%;
+		border-top: 1px solid #EEEEEE;
+		-webkit-transform: translate(-50%, 490%);
+		transform: translate(-50%, 490%);
+	}
+	#cj #user_btn,#user_login h3,#zjts h3,#cj #gxie_btn,#cjcs h3,#cj #cjcs_btn,#nyzj h3,
+	.dj_pass h3,.dj_pass_btn > span{
+		font-size:.8rem;
+	}
+	#userName > span,#password > span,#zjts > p,#cjcs > p{
+		font-size:.6rem;
+	}
+	.zjdz > p{
+		line-height: 200%;
+		font-size:.7rem;
+	}
+	#nyzj .zjdz{
+		height: 150px;
+	}
+	#cj #nyzj{
+		height: 250px;
+	}
+	#cj #nyzj_btn{
+		-webkit-transform: translate(-50%, 80px);
+		transform: translate(-50%, 80px);
+		font-size:.8rem;
+	}
+	#user::-webkit-input-placeholder,#pass::-webkit-input-placeholder{
+		font-size: .6rem;
+	}
+	#jping_mainBox .jp_content{
+		font-size: .7rem;
+		line-height: 160%;
+	}
+}
+@media only screen and (min-height:813px) {
+	#jp p{
+		font-size:2rem;
+	}
+	#jp ul li{
+		font-size:1.2rem;
+	}
+	#zpang > p{
+		font-size:1.3rem;
+	}
+	#shuoming h3{
+		font-size:1.6rem;
+	}
+	#shuoming p{
+		font-size:1.3rem;
+		line-height: 190%;
+	}
+	#cj #yxsm_btn{
+		font-size:1.7rem;
+		height: 6%;
+		border-top: 1px solid #999999;
+		-webkit-transform: translate(-50%, 490%);
+		transform: translate(-50%, 490%);
+	}
+	#cj #user_btn,#user_login h3{
+		font-size:1.7rem;
+	}
+	#userName > span,#password > span{
+		font-size:1.4rem;
+	}
+	#user::-webkit-input-placeholder,#pass::-webkit-input-placeholder{
+		font-size: 1.4rem;
+	}
+	#jping_mainBox .jp_content{
+		font-size: 1.3rem;
+		line-height: 160%;
+	}
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>lyt-移动端抽奖</title>
+		<link rel="stylesheet" href="css/new_file.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/new_file.js" ></script>
+		<script type="text/javascript" src="js/cookie.js" ></script>
+	</head>
+	<body>
+		<div id="warp">
+			<img src="img/index1.jpg"/>
+			<img src="img/index2.jpg"/>
+			<img src="img/index3.jpg"/>
+			<img src="img/jgjg_02.jpg"/>
+		</div>
+		
+		<div id="cj">
+			<img src="img/jg_02.jpg" />
+			<img src="img/jg_03.jpg" />
+			<img src="img/jgjg_02.jpg"/>
+			<img src="img/jg_04.jpg" id="wd_btn"/>
+			<img src="img/jg_05.jpg" id="cj_src"/>
+			<div id="jp">
+				<p>已发出的奖品：</p>
+				<div class="zj_user">
+					<ul id="lyt"></ul> <!--ajax-->
+				</div>
+			</div>
+			<div id="zpang">
+				<p>今日抽奖次数：<span id="cs">3</span>次<span id="yxgz">游戏规则</span></p>
+				<div id="box">
+					<img src="img/sudoku_01.jpg"/>
+					<img src="img/sudoku_02.jpg"/>
+					<img src="img/sudoku_03.jpg"/>
+					<img src="img/sudoku_04.jpg"/>			
+					<img src="img/sudoku_06.jpg"/>
+					<img src="img/sudoku_07.jpg"/>
+					<img src="img/sudoku_08.jpg"/>
+					<img src="img/sudoku_09.jpg"/>
+					<img id="btn" src="img/sudoku_05.jpg"/>
+				</div>
+			</div>
+			<div id="shuoming">
+				<h3>游戏规则</h3>
+			</div>
+			<div id="yxsm_btn"><span>确定</span></div>
+			<div id="user_login">
+				<h3>输入信息</h3>
+				<div id="userName">
+					<span>姓&nbsp;&nbsp;&nbsp;名：</span>
+					<input type="text" placeholder="请输入你的真实姓名" id="user"/><span class="cuowu">X</span>
+				</div>
+				<div id="password">
+					<span>手&nbsp;&nbsp;&nbsp;机：</span>
+					<input type="text" placeholder="请输入手机号" id="pass"/><span class="zque">X</span>
+				</div>
+				<div id="user_btn"><span id="submit">确定</span><span id="exit">取消</span></div>
+			</div>
+			<div id="zjts">
+				<h3>感谢参与</h3>
+				<p>很遗憾，您未中奖!</p>
+				<div id="gxie_btn"><span>确定</span></div>
+			</div>
+			<div id="cjcs">
+				<h3>抽奖次数</h3>
+				<p>抽奖次数已用完，请下次再来！</p>
+				<div id="cjcs_btn"><span>确定</span></div>
+			</div>
+			<div id="nyzj">
+				<h3>恭喜您，中奖了！</h3>
+				<div class="zjdz"></div>  <!--ajax-->
+				<div id="nyzj_btn"><span>确定</span></div>
+			</div>
+			<div id="mb"></div> <!--蒙版-->
+			
+			<!--我的奖品:start-->
+			<div id="jping">
+				<img src="img/jg_04.jpg" id="jp_04"/>
+				<img src="img/jgjg_02.jpg"/>
+				<div id="jping_mainBox">
+					<div class="main_box">
+						<div class="js_logo">
+							<img src="img/sudoku_01.jpg"/>
+						</div>
+						<div class="jp_content wdjpA"></div>  <!--ajax-->
+						<div class="jp_content duijiang lytAA">立即兑奖</div>
+					</div>
+					
+					<div class="main_box">
+						<div class="js_logo">
+							<img src="img/sudoku_02.jpg"/>
+						</div>
+						<div class="jp_content wdjpB"></div>
+						<div class="jp_content duijiang lytBB">立即兑奖</div>
+					</div>
+				</div>
+				<img src="img/jgjg_02.jpg"/>
+				<img src="img/jg_01_04.jpg" id="jg_04"/>
+				<!--立即兑奖密码-->
+				<div class="dj_pass lyt1">
+					<h3>请输入密码</h3>
+					<input type="text" id="mimaA"/>
+					<div class="dj_pass_btn bb"><span>确定</span><span>取消</span></div>
+				</div>
+				<div class="dj_pass lyt2">
+					<h3>请输入密码</h3>
+					<input type="text" id="mimaB"/>
+					<div class="dj_pass_btn cc"><span>确定</span><span>取消</span></div>
+				</div>
+			</div>
+			<!--我的奖品:end-->
+		</div>
+		
+	</body>
+</html>
