@@ -327,7 +327,7 @@ $(function(){
 			$(".lyt2").css({"display":"none"});
 			$("#mb").css({"display":"none","z-index":""});
 			$("#mimaB").val("");
-			$(".lytBB").html("以兑换");
+			$(".lytBB").html("已兑换");
 			code1 = "4321";
 			if(code1=="4321"){
 				$(".lytBB").off();
